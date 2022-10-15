@@ -10,11 +10,11 @@ while (true)
     bool[] A = new bool[x];
 
     stopwatch.Start();
-    for (int i = 2; i < Math.Sqrt(x) + 1; i++)
+    for (int i = 2; i < Math.Sqrt(x) + 1; i++) // sqrt x = максимальны делитель числа
     {
         if (!A[i])
         {
-            for (int j = i * i; j < x; j += i)
+            for (int j = i * i; j < x; j += i) //отсеивание составных чисел, сложные делители проверяются на предстоящие делители
             {
                 A[j] = true;
             }
